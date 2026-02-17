@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@element-plus/nuxt'],
   css: ['@/assets/styles/main.scss'],
+  runtimeConfig: {
+    public: {
+      apiBase: 'https://test-task-api.tapir.ws',
+    },
+  },
   typescript: {
     strict: true,
   },
