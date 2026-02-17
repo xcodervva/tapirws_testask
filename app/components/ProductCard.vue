@@ -23,28 +23,24 @@ const halfPrice = computed<number>(() => {
         class="product-card__image"
       />
 
-      <button
-        type="button"
-        class="product-card__favorite"
-      >
-        Добавить в избранное
-      </button>
+      <img src="/favorite.png" class="favorite" alt="Добавить в избранное" />
     </div>
 
     <div class="product-card__content">
-      <h3 class="product-card__title">
-        {{ product.name }}
-      </h3>
-
       <div class="product-card__prices">
         <span class="product-card__price">
           {{ product.price }} ₽
         </span>
 
-        <span class="product-card__price product-card__price--half">
+        <span class="product-card__price--half">
           x2: {{ halfPrice }} ₽
         </span>
       </div>
+      
+      <div class="product-card__title">
+        {{ product.name }}
+      </div>
+
     </div>
   </a>
 </template>

@@ -9,6 +9,12 @@
   background-color: $color-black;
   padding: 0px 32px;
 
+  @media (max-width: 600px) {
+    height: 100%;
+    
+    flex-direction: column;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -19,6 +25,10 @@
   &__nav {
     display: flex;
     gap: 16px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
 
     .column {
       width: 314px;
@@ -33,7 +43,7 @@
     text-decoration: none;
     color: $color-white;
   }
-  
+
   &__link.title {
     color: $color-dark;
   }

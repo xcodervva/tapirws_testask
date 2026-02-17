@@ -27,6 +27,8 @@ if (store.products.length === 0) {
 
 <template>
   <section class="catalog">
+    <h1 class="catalog__title">каталог</h1>
+
     <div class="catalog__container">
       <ProductsList :products="store.products" />
 
