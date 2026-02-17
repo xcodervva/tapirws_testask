@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
-import type { Product } from 'types/Product';
-import type { ProductsResponse } from 'types/ProductsResponse';
-import { useProducts } from 'composables/useProducts';
+import type { Product } from '~/types/Product';
+import type { ProductsResponse } from '~/types/ProductsResponse';
+import { useProducts } from '~/composables/useProducts';
 
 export const useProductsStore = defineStore('products', () => {
   const products = ref<Product[]>([]);

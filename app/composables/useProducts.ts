@@ -1,5 +1,5 @@
 import { useRuntimeConfig } from 'nuxt/app';
-import type { ProductsResponse } from '@/types/ProductsResponse';
+import type { ProductsResponse } from '~/types/ProductsResponse';
 
 export const useProducts = () => {
   const config = useRuntimeConfig();
