@@ -1,0 +1,41 @@
+.header {
+  padding: 16px 32px;
+
+  background-color: $color-gray;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-dark;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-dark;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    &__nav {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+}
