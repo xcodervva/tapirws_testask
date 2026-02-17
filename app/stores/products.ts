@@ -36,7 +36,11 @@ export const useProductsStore = defineStore('products', () => {
     try {
       const nextPage = currentPage.value + 1;
 
-      const response = await fetchProducts(nextPage, limit.value);
+      // const response = await fetchProducts(nextPage, limit.value);
+      const [response] = await Promise.all([
+        fetchProducts(nextPage, limit.value),
+        delay(1000),
+      ]);
 
       products.value = [...products.value, ...response.products];
       currentPage.value = response.currentPage;

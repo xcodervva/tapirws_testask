@@ -5,6 +5,7 @@ import ProductsList from '~/components/ProductsList.vue';
 
 const store = useProductsStore();
 const { fetchProducts } = useProducts();
+const { fetchNextPage } = store;
 
 /**
  * SSR загрузка первой страницы
@@ -23,6 +24,10 @@ if (store.products.length === 0) {
     store.error = true;
   }
 }
+
+const loadMore = async (): Promise<void> => {
+  await fetchNextPage();
+};
 </script>
 
 <template>
@@ -61,7 +66,7 @@ if (store.products.length === 0) {
         <button
           v-if="store.hasNextPage && !store.loading && !store.error"
           class="catalog__more"
-          @click="store.fetchNextPage"
+          @click="loadMore"
         >
           Показать ещё
         </button>
