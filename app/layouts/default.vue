@@ -10,10 +10,3 @@
 
 <script setup lang="ts">
 </script>
-
-<style lang="scss" scoped>
-.layout__content {
-  min-height: calc(100vh - 460px);
-  padding: 16px;
-}
-</style>

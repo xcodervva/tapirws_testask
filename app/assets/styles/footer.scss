@@ -1,8 +1,13 @@
 @use 'variables' as *;
 
 .footer {
+  height: 390px;
+
+  display: flex;
+  align-items: center;
+
   background-color: $color-black;
-  padding: 110px 32px;
+  padding: 0px 32px;
 
   &__container {
     display: flex;

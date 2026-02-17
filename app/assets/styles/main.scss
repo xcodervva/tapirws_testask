@@ -3,8 +3,10 @@
 @use 'catalog';
 @use 'header';
 @use 'footer';
+@use 'home';
+@use 'layout';
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'GolosText';
 }
