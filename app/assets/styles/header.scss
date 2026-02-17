@@ -1,7 +1,10 @@
+
+@use 'variables' as *;
+
 .header {
   padding: 16px 32px;
 
-  background-color: $color-gray;
+  background-color: $color-white;
 
   &__container {
     display: flex;
@@ -10,9 +13,10 @@
   }
 
   &__logo {
-    font-weight: bold;
-    text-decoration: none;
-    color: $color-dark;
+    height: 42px;
+    width: 42px;
+
+    background-color: $color-red;
   }
 
   &__nav {
@@ -35,6 +39,9 @@
     }
 
     &__burger {
+      height: 40px;
+      width: 40px;
+      
       display: block;
     }
   }
