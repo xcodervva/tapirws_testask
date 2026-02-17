@@ -1,75 +1,43 @@
-# Nuxt Minimal Starter
+Тестовое задание на позицию frontend–разработчика
+Задача
+Разработать: Nuxt-приложение на основе предоставленного макета
+Технологии
+Nuxt 4 + TypeScript
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Эндпоинт для получения товаров: test-task-api.tapir.ws/products
+Примеры использования:
+test-task-api.tapir.ws/products?page=1
+test-task-api.tapir.ws/products?page=2&limit=10
+Функциональные требования
+Шапка
+Все ссылки — заглушки (href="#")
+«Бургер кнопка» никаких действий не производит. Мобильное меню реализовывать не требуется.
+Главная страница
+При клике на кнопку «В каталог» происходит переход на страницу каталога.
+Каталог товаров
+Вся карточка товара является ссылками с заглушкой (href="#").
+Кнопка «Добавить в избранное» в карточке товара визуально присутствует, но не выполняет никаких действий.
+Цена «x2» в карточке товара рассчитывается как <цена товара> / 2, округлить до целого в большую сторону
+При первой загрузке страницы отображается первая страница товаров (SSR-рендеринг обязателен).
+При нажатии кнопки «Показать ещё»:
+ кнопка скрывается;
+вместо неё отображается индикатор «Загрузка...».
+В случае успешного ответа:
+Индикатор «Загрузка...» скрывается.
+Новые товары добавляются к уже отображаемому списку
+Если доступна следующая страница, повторно отображается кнопка «Показать ещё».
+В случае сетевой ошибки:
+Индикатор «Загрузка...» скрывается.
+Под списком товаров отображается блок с текстом: «Произошла ошибка, попробуйте позже» и кнопка «Повторить», при нажатии которой выполняется повторная попытка получить данные.
+Подвал
+Все ссылки — заглушки (href="#").
+Технические требования
+Поддержка SSR.
+Использование TypeScript.
+Адаптивная верстка в соответствии с макетом.
+Именование CSS-классов по методологии БЭМ (блок__элемент--модификатор).
+Стилизация с использованием SCSS.
+Вёрстка должна преимущественно использовать grid и flex.
+Ожидаемый результат
+Проект размещён в публичном репозитории на GitHub и предоставлена ссылка для
+клонирования репозитория.

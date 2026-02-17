@@ -14,5 +14,22 @@
     {
       "path": "./.nuxt/tsconfig.node.json"
     }
+  ],
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "types": ["./types", "./types/element-plus-locale.d.ts"]
+  },
+  "include": [
+    "types/**/*.d.ts",
+    "stores/**/*.ts",
+    "pages/**/*.vue",
+    "components/**/*.vue",
+    "composables/**/*.ts",
+    "plugins/**/*.ts"
   ]
 }
