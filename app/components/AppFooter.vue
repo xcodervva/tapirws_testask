@@ -21,6 +21,79 @@ const catalogData = ref<CatalogData[]>([
     text: 'Adidas',
   },
 ]);
+
+const helpData = ref<CatalogData[]>([
+  {
+    id: 'help',
+    text: 'Помощь',
+  },
+  {
+    id: 'delivery',
+    text: 'Доставка',
+  },
+  {
+    id: 'order',
+    text: 'Заказ и оплата',
+  },
+  {
+    id: 'exchange',
+    text: 'Обмен и возврат',
+  },
+  {
+    id: 'faq',
+    text: 'F.A.Q.',
+  },
+]);
+
+const infoData = ref<CatalogData[]>([
+  {
+    id: 'info',
+    text: 'Информация',
+  },
+  {
+    id: 'prefer',
+    text: 'Преимущества',
+  },
+  {
+    id: 'guarantees',
+    text: 'Гарантия и безопасность',
+  },
+  {
+    id: 'individual',
+    text: 'Индивидуальный заказ',
+  },
+  {
+    id: 'promotions',
+    text: 'Акции',
+  },
+]);
+
+const companyData = ref<CatalogData[]>([
+  {
+    id: 'company',
+    text: 'Компания',
+  },
+  {
+    id: 'about',
+    text: 'О нас',
+  },
+  {
+    id: 'guarantees',
+    text: 'Гарантия и безопасность',
+  },
+  {
+    id: 'blog',
+    text: 'Блог',
+  },
+  {
+    id: 'reviews',
+    text: 'Отзывы',
+  },
+  {
+    id: 'contacts',
+    text: 'Контакты',
+  },
+]);
 </script>
 
 <template>
@@ -29,24 +102,26 @@ const catalogData = ref<CatalogData[]>([
       <nav class="footer__nav">
         <div class="column">
           <a href="#" 
-          :class="[{ title: idx === 0 }, 'footer__link']" v-for="(catalog, idx) in catalogData" :key="catalog.id">
-          {{ catalog.text }}</a>
+            :class="[{ title: idx === 0 }, 'footer__link']" v-for="(catalog, idx) in catalogData" :key="catalog.id">
+            {{ catalog.text }}</a>
         </div>
 
         <div class="column">
-          <a href="#" class="footer__link title">Помощь</a>
-          <a href="#" class="footer__link">Доставка</a>
-          <a href="#" class="footer__link">Заказ и оплата</a>
-          <a href="#" class="footer__link">Обмен и возврат</a>
-          <a href="#" class="footer__link">F.A.Q.</a>
+          <a href="#"
+            :class="[{ title: idx === 0 }, 'footer__link']" v-for="(help, idx) in helpData" :key="help.id">
+            {{ help.text }}</a>
         </div>
 
         <div class="column">
-          <a href="#" class="footer__link title">Помощь</a>
-          <a href="#" class="footer__link">Доставка</a>
-          <a href="#" class="footer__link">Заказ и оплата</a>
-          <a href="#" class="footer__link">Обмен и возврат</a>
-          <a href="#" class="footer__link">F.A.Q.</a>
+            <a href="#"
+            :class="[{ title: idx === 0 }, 'footer__link']" v-for="(info, idx) in infoData" :key="info.id">
+            {{ info.text }}</a>
+        </div>
+
+        <div class="column">
+            <a href="#"
+            :class="[{ title: idx === 0 }, 'footer__link']" v-for="(company, idx) in companyData" :key="company.id">
+            {{ company.text }}</a>
         </div>
       </nav>
     </div>
